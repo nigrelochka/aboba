@@ -1,0 +1,135 @@
+x = 30
+x = 45
+y = 0
+x1 = -20
+x2 = 20
+x3 = 48
+z = 150
+z1 = 120
+z2 = 180
+z3 = 100
+z4 = 200
+z0 = 350
+z11 = 320
+z22 = 380
+z33 = 300
+z44 = 400
+def setup():
+    size(800,800)
+
+
+def draw():
+    frameRate(20)
+    background(114,187,250)
+    global x,y, x1, x2,x3, z,z1,z2,z3,z4,z0,z11,z22,z33,z44
+    ellipse(y,550,80,60)
+    push()
+    noStroke()
+    ellipse(x,530,45,40)
+    fill(54,118,206)
+    rect(0,400,900,70)
+    pop()
+    push()
+    fill(240,228,99)
+    strokeWeight(1)
+    ellipse(700,100,100,100)
+    pop()
+    push()
+    fill(240,228,99)
+    noStroke()
+    rect(0,470,800,800)
+    pop()
+    translate(200,0)
+    global x,y, x1, x2,x3
+    fill(47,211,133)
+    strokeWeight(3)
+    ellipse(x1,520,30,30)
+    ellipse(x1,580,30,30)
+    ellipse(x2,580,30,30)
+    ellipse(x2,520,30,30)
+    ellipse(x,550,40,40)
+    ellipse(y,550,80,80)
+    push()
+    strokeWeight(5)
+    point(x3,543)
+    point(x3,558)
+    pop()
+    if mousePressed == True:
+        y = y + 2
+        x = x + 2
+        x1 = x1 + 2
+        x2 = x2 + 2
+        x3 = x3 + 2
+    if x>800:
+       x=-250
+    if x1>800:
+       x1=-250
+    if x2>800:
+       x2=-250
+    if x3>800:
+       x3=-250
+    if y>800:
+       y=-250                
+    translate(-200,0)
+    strokeWeight(10)
+    stroke(113,70,70)
+    line(300,470,350,270)
+    stroke(0)
+    strokeWeight(1)
+    fill(242,125,125)
+    triangle(210,240,375,170,470,310)
+    push()
+    noStroke()
+    fill(255)
+    ellipse(z,75,150,70)
+    ellipse(z,75,50,90)
+    ellipse(z1,75,50,80)
+    ellipse(z2,75,50,80)
+    ellipse(z3,75,50,70)
+    ellipse(z4,75,50,70)
+    ellipse(z,75,170,60)
+    z = z - 1
+    z1 = z1 - 1
+    z2 = z2 - 1
+    z3 = z3 - 1
+    z4 = z4 -1
+    if z<-50:
+        z=800
+    if z1<-50:
+        z1=800
+    if z2<-50:
+        z2=800  
+    if z3<-50:
+        z3=800
+    if z4<-50:
+        z4=800        
+    pop()
+    push()
+    noStroke()
+    fill(255)
+    ellipse(z0,125,150,70)
+    ellipse(z0,125,50,90)
+    ellipse(z11,125,50,80)
+    ellipse(z22,125,50,80)
+    ellipse(z33,125,50,70)
+    ellipse(z44,125,50,70)
+    ellipse(z0,125,170,60)
+  
+    z0 = z0 - 1
+    z11 = z11 - 1
+    z22 = z22 - 1
+    z33 = z33 - 1
+    z44 = z44 -1
+    if z0<-50:
+        z0=800
+    if z11<-50:
+        z11=800
+    if z22<-50:
+        z22=800  
+    if z33<-50:
+        z33=800
+    if z44<-50:
+        z44=800  
+        
+    pop()  
+   
