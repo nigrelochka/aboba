@@ -1,0 +1,19 @@
+x=0
+y = 10
+def setup():
+    size(600,600)
+def draw():
+    background(222,103,200)
+    global x,y
+    translate(300,300)
+    fill(103,143,222)
+    ellipse(x,x,50,50)
+    if mousePressed==True:  
+     x=x+y
+     if x>300:
+       y = random(-5,-10)
+     if x<-300:
+       y = random(5,10)
+    
+  
+        
