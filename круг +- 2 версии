@@ -1,0 +1,41 @@
+x=0
+mode='рост'#уменьшение
+def setup():
+    size(800,800)
+    background(0)
+def draw():
+    background(222,103,200)
+    global x, mode
+    fill(103,143,222)
+    ellipse(400,400,x,x)
+    if x>300:
+        mode = 'уменьшение'
+    if mode == 'уменьшение':
+        x = x - 1
+    if x<0:
+        mode = 'рост'
+    if mode == 'рост':    
+        x=x+1  
+    if mousePressed==True:
+       x = 0
+       
+       
+       
+       
+       x=0
+y = 1
+def setup():
+    size(800,800)
+    background(0)
+def draw():
+    background(222,103,200)
+    global x,y
+    fill(103,143,222)
+    ellipse(400,400,x,x)
+    x=x+y
+    if x>300:
+        y = -1
+    if x<0:
+       y = 1 
+    if mousePressed==True:
+       x = 0
