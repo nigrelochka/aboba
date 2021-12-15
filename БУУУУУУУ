@@ -1,0 +1,52 @@
+x = 95+50
+y = 50+50
+x1 = 30+50
+x2 = 70+50
+x3 = 98+50
+u = 320
+u1 = 380
+u2 = 350
+r = 343
+s = 358
+def setup():
+    size(800,800)
+    
+def draw():
+    background(0) 
+    global x,y, x1, x2,x3,u,u1,u2,r,s
+    if mouseButton==RIGHT:
+     fill(47,211,133)
+     strokeWeight(3)
+     ellipse(x1,u,30,30)
+     ellipse(x1,u1,30,30)
+     ellipse(x2,u1,30,30)
+     ellipse(x2,u,30,30)
+     ellipse(x,u2,40,40)
+     ellipse(y,u2,80,80)
+     strokeWeight(5)
+     point(x3,r)
+     point(x3,s)
+    if mouseButton==LEFT:
+     push()
+     fill(255)
+     noStroke()   
+     ellipse(400,400,300,500)
+     ellipse(530,400,100,100)
+     ellipse(270,400,100,100)
+     stroke(0)
+     strokeWeight(20)
+     point(450,300)
+     point(350,300)
+     fill(0)
+     ellipse(400,400,20,50)      
+     pop()
+    if mouseButton==CENTER:
+     fill(255,124,0)   
+     ellipse(400,400,500,300)
+     stroke(0)
+     strokeWeight(20)
+     point(450,400)
+     point(350,400)
+     fill(0)
+     ellipse(400,450,50,20)      
+                        
