@@ -1,0 +1,43 @@
+x = 45+400
+y = 0+400
+x1 = -20+400
+x2 = 20+400
+x3 = 48+400
+u = 320
+u1 = 380
+u2 = 350
+r = 343
+s = 358
+j=30
+k=40
+l=80
+def setup():
+    size(800,800)
+    
+def draw():
+    background(245,225,40) 
+    fill(255)
+    rect(150,10,500,100)
+    textSize(25)
+    fill(0)
+    textAlign(CENTER,CENTER)
+    text(u"покормить черепашку",400,50)
+    global x,y, x1, x2,x3,u,u1,u2,r,s,j,k,l
+    fill(47,211,133)
+    strokeWeight(3)
+    ellipse(x1,u,j,j)
+    ellipse(x1,u1,j,j)
+    ellipse(x2,u1,j,j)
+    ellipse(x2,u,j,j)
+    ellipse(x,u2,k,k)
+    ellipse(y,u2,l,l)
+    strokeWeight(5)
+    point(x3,r)
+    point(x3,s)
+def mouseClicked():
+    global j,k,l,r,s,x3
+    if mouseX > 150 and mouseX < 650 and mouseY > 10 and mouseY < 110:
+      j=j+1
+      k=k+1
+      l=l+1
+      x3=x3+0.5 
