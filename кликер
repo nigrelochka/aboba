@@ -1,0 +1,34 @@
+x=0
+y=1800
+def setup():
+    size(600,600)
+    frameRate(60)
+def draw():
+    background(255)
+    global x,y
+    y=y-1
+    fill(255)
+    rect(150,10,300,100)
+    textSize(50)
+    fill(0)
+    textAlign(CENTER,CENTER)
+    text(u"поинты " + str(x),300,300)
+    textSize(25)
+    text(u"у тебя всего 30 секунд ",150+150,400)
+    text(u"добавить поинты",150+150,50)
+    if y<0:
+       noLoop()
+       background(255)
+       fill(0)
+       textSize(70)
+       text(u"ботик",300,300)  
+def mouseClicked():
+    global x,y
+    if mouseX > 150 and mouseX < 450 and mouseY > 10 and mouseY < 110:
+      x=x+1
+    if x>30:
+       noLoop()
+       background(255)
+       fill(0)
+       textSize(70)
+       text(u"ты победил!!!",300,300)
