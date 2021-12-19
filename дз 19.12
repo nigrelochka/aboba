@@ -37,4 +37,59 @@ def draw():
       
       
       
+      b= 3
+def setup():
+    size(800,800)
+def draw():
+    background(0)
+    global x,y,x1,z,x2,x3,v,x4,x5,b
+    fill(255,167,3)
+    ellipse(400,400,150,150)
+    push()
+    fill(175,0,0)
+    ellipse(x,x,50,50)
+    x= x-y
+    if x<200:
+        y=-1
+    if x>600:
+        y=1    
+    pop()
+    push()
+    fill(70,45,214)
+    ellipse(x1,x2,80,80)
+    x1= x1+z
+    if x1>800:
+        z=-5
+    if x1<0:
+        z=5    
+    pop()
+    push()
+    fill(44,175,52)
+    ellipse(x2,x3,30,30)
+    x3= x3+v
+    if x3<100:
+        v=+7
+    if x3>700:
+        v=-7  
+    pop()
+    push()
+    fill(232,214,47)
+    ellipse(x4,x5,100,100)
+    x4= x4-b
+    x5= x5+b
+    if x4<200:
+        b=-3
+    if x4>600:
+        b=3
+    if x5<200:
+        b=3
+    if x5>600:
+        b=-3        
+    pop()
+      
+      
+      
+      
+      
+      
       
