@@ -15,6 +15,14 @@ def draw():
     rect(150,0,150,50)
     fill(214,216,101)
     rect(300,0,150,50)
+    fill(236,240,56)
+    rect(0,50,150,50)
+    fill(56,118,240)
+    rect(150,50,150,50)
+    fill(240,56,56)
+    rect(300,50,150,50)
+    fill(0)
+    rect(450,50,150,50)
     fill(101,216,121)
     rect(450,0,150,50)
     fill(0)
@@ -24,9 +32,16 @@ def draw():
     text(u"очистка",75+150,25)
     text(u"размер",75+150+150,25)
     text(u"зелёный",75+150+300,25)
+    fill(255)
+    text(u"чёрный",75+150+300,25+50)
+    fill(0)
+    text(u"красный",75+150+150,25+50)
+    text(u"синий",75+150,25+50)
+    text(u"жёлтый",75,25+50)
     stroke(x,y,z)
     strokeWeight(h)
-    line(pmouseX,pmouseY,mouseX,mouseY) 
+    if mousePressed==True:
+     line(pmouseX,pmouseY,mouseX,mouseY) 
 def mouseClicked():
     global x,y,z,h
     if mouseX > 0 and mouseX < 150 and mouseY > 0 and mouseY < 50:
@@ -41,4 +56,12 @@ def mouseClicked():
     if mouseX > 450 and mouseX < 600 and mouseY > 0 and mouseY < 50:
       x=101
       y=216
-      z=121 
+      z=121
+    if mouseX > 0 and mouseX < 150 and mouseY > 50 and mouseY < 100:
+      
+      x=197
+      y=101
+      z=216 
+ 
+       
+  
