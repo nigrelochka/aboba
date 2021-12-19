@@ -20,3 +20,21 @@ def draw():
        
        
        
+def setup():
+    size(800,800)
+    background(0,0,0)
+def draw():
+    global x
+    frameRate(10)
+    stroke(random(170,242))
+    strokeWeight(random (2,7))
+    point(random(0,800),random(0,800))
+    if :
+      background(0,0,0)
+      
+      
+      
+      
+      
+      
+      
