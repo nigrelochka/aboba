@@ -29,8 +29,9 @@ def draw():
     stroke(random(170,242))
     strokeWeight(random (2,7))
     point(random(0,800),random(0,800))
-    if :
+    if x>200:
       background(0,0,0)
+      x=0
       
       
       
