@@ -1,0 +1,38 @@
+i=0
+def setup():
+    size(600,600)
+    global x,y,z,a,b,g
+    x = loadImage("ivan.png")
+    y = loadImage("podpiska.png")
+    z = loadImage("nekoglai.png")
+    a = loadImage("byster.png")
+    b = loadImage("cveta.png")
+    g = loadImage("mia.png")
+def draw():
+    
+    background(255)
+    global x,y,z,a,b,g
+    image(y,200,25,200,100)
+    fill(0)
+    textAlign(CENTER,CENTER)
+    textSize(20)
+    text(u"подписчиков:" +(str (i)),300,135) 
+    if i>1000:
+        image(z,450,300,150,300)
+    if i>2500:
+        image(a,0,350,250,250)
+    if i>4000:
+        image(b,0,100,200,250)
+    if i>5000:
+        image(g,350,100,250,250)         
+    image(x,125,300,300,300) 
+    if i>6000:
+       noLoop()
+       background(255)
+       fill(0)
+       textSize(20)
+       text(u"ивану пора домой. у него строгий график!",300,300)  
+def mouseClicked():
+    global x,y,i
+    if mouseX > 200 and mouseX < 400 and mouseY > 25 and mouseY < 125:
+        i=i+100  
