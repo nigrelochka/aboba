@@ -1,0 +1,23 @@
+z=0
+y=150
+a=2
+def setup():
+    size(600,600)
+    global x,y,z,a,b,g
+    x = loadImage("gavs.png")
+def draw():
+    
+    global x,y,z,a,b,g
+    image(x,z,y,150,200)
+    y=y+0
+    z=z+a
+    if z>450:
+       a=-2
+    if z<0:
+       a=2
+    if keyPressed:
+        if key == 'w' or key == 'W' or key == 'ц' or key == 'Ц':
+           y=y+2
+    if keyPressed:
+        if key == 'S' or key == 's' or key == 'Ы' or key == 'ы':
+           y=y-2      
