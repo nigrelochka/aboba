@@ -1,0 +1,31 @@
+x=300
+y=300
+z=0
+def setup():
+    size(600,600)
+def draw():
+    global x,y,z
+    background (255)    
+    fill(234,170,230)
+    ellipse(x,y,60,60)
+    x=x+z
+    y=y+z
+    if key == CODED:
+           if keyCode == UP: 
+              y=y-10
+    if key == CODED:
+           if keyCode == DOWN: 
+              y=y+10  
+    if key == CODED:
+           if keyCode == LEFT: 
+              x=x-10
+    if key == CODED:
+            if keyCode == RIGHT: 
+              x=x+10
+    if x>600:
+        z = random(-5,-10)
+    if x<0:
+        z = random(5,10)      
+    if y<0:
+        z = random(5,10)   
+            
