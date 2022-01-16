@@ -1,0 +1,24 @@
+z=200
+y=200
+a=2
+def setup():
+    size(600,600)
+    global x,y,z,a,b,g
+    x = loadImage("gavs.png")
+def draw():
+    global x,y,z,a,b,g
+    background(255)
+    image(x,z,y,150,200)
+    if keyPressed:
+        if key == CODED:
+           if keyCode == UP: 
+              y=y-2
+        if key == CODED:
+           if keyCode == DOWN: 
+              y=y+2  
+        if key == CODED:
+           if keyCode == LEFT: 
+              z=z-2
+        if key == CODED:
+            if keyCode == RIGHT: 
+              z=z+2        
