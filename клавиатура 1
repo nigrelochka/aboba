@@ -1,0 +1,29 @@
+def setup():
+    size(600,600)
+def draw():
+    background(255)
+    if key == 'b' or key == 'B' or key == u'и' or key == u'И':
+        background(255)
+        textSize(20)
+        fill(0)
+        text(u"и",300,300)
+    if key == 'r' or key == 'R' or key == u'К' or key == u'к':
+        background(255)
+        textSize(20)
+        fill(0)
+        text(u"к",300,300) 
+    if key == 'e' or key == 'E' or key == u'у' or key == u'У':
+        background(255)
+        textSize(20)
+        fill(0)
+        text(u"у",300,300)    
+    if key == 'Q' or key == 'q' or key == u'Й' or key == u'й':
+        background(255)
+        textSize(20)
+        fill(0)
+        text(u"й",300,300)    
+    if key == 'W' or key == 'w' or key == u'ц' or key == u'ц':
+        background(255)
+        textSize(20)
+        fill(0)
+        text(u"ц",300,300)                    
