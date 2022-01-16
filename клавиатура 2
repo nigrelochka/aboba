@@ -1,0 +1,13 @@
+x=10
+def setup():
+    size(600,600)
+def draw():
+    global x
+    background(255)
+    fill(234,170,230)
+    ellipse(300,300,x,x)
+    if keyPressed:
+        if key=='w' or key=='W' or key==u'ц' or key==u'Ц':
+            x=x+1
+        if key=='s' or key=='S' or key==u'Ы' or key==u'ы':
+            x=x-1   
