@@ -1,0 +1,82 @@
+x=0
+bg=0
+y=0
+z=0
+h=1
+def setup():
+    size(600,600)
+    background(255)
+def draw():
+    global bg,x,y,z,h
+    stroke(0)
+    strokeWeight(1)
+    fill(197,101,216)
+    rect(0,0,150,50)
+    fill(255)  
+    rect(150,0,150,50)
+    fill(214,216,101)
+    rect(300,0,150,50)
+    fill(236,240,56)
+    rect(0,50,150,50)
+    fill(56,118,240)
+    rect(150,50,150,50)
+    fill(240,56,56)
+    rect(300,50,150,50)
+    fill(0)
+    rect(450,50,150,50)
+    fill(101,216,121)
+    rect(450,0,150,50)
+    fill(0)
+    textSize(15)
+    textAlign(CENTER,CENTER)
+    text(u"w - фиолетовый",75,25)
+    text(u"del - очистка",75+150,25)
+    text(u"ctrl - толщина",75+150+150,25)
+    text(u"a - зелёный",75+150+300,25)
+    fill(255)
+    text(u"z - чёрный",75+150+300,25+50)
+    fill(0)
+    text(u"v - красный",75+150+150,25+50)
+    text(u"b- синий",75+150,25+50)
+    text(u"f - жёлтый",75,25+50)
+    stroke(x,y,z)
+    strokeWeight(h)
+    if mousePressed==True:
+     line(pmouseX,pmouseY,mouseX,mouseY)
+def keyPressed():
+    global x,y,z,h
+    if key == 'w' or key == 'W' or key == u'ц' or key == u'Ц':
+      
+      x=197
+      y=101
+      z=216
+    if key == DELETE: 
+       background(255)    
+    if key == CODED:
+       if keyCode ==CONTROL: 
+           h=h+1
+    if key == 'A' or key == 'A' or key == u'ф' or key == u'Ф':
+      x=101
+      y=216
+      z=121
+    if key == 'F' or key == 'f' or key == u'а' or key == u'А':
+      
+      x=236
+      y=240
+      z=56 
+    if key == 'B' or key == 'b' or key == u'И' or key == u'и':
+      
+      x=56
+      y=118
+      z=240
+    if key == 'V' or key == 'v' or key == u'М' or key == u'м':  
+       x=240
+       y=56
+       z=56 
+    if key == 'z' or key == 'Z' or key == u'я' or key == u'Я':
+       x=0
+       y=0
+       z=0   
+    if key == CODED:
+        if keyCode == ALT: 
+           h=1  
