@@ -1,0 +1,11 @@
+myText = ""
+def setup():
+    size(600,600)
+def draw():
+    global myText
+def keyPressed(): 
+    global myText   
+    myText=myText+key
+    textSize(20)
+    fill(0)
+    text(myText,10,300)
