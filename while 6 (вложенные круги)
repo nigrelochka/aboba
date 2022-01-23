@@ -1,0 +1,8 @@
+x=300
+def setup():
+    size(600,600)
+def draw():
+    global x
+    while x>0:
+        ellipse(300,300,x,x)
+        x-=10
