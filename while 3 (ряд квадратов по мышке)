@@ -1,0 +1,15 @@
+y=0
+z=0
+def setup():
+    size(600,600)
+def draw():
+    frameRate(1)
+    global y,z 
+    x=0
+    while x < width:
+         fill(random(0,255),random(0,255),random(0,255))
+         rect(x,z,50,50)
+         x=x+50 
+         if z > mouseY:
+            noLoop()        
+    z=z+50   
