@@ -1,0 +1,6 @@
+def setup():
+    size(600,600)
+def draw():
+    background(255)
+    for x in range(500,0,-30):
+        ellipse(300,300,x,x)
