@@ -1,0 +1,9 @@
+y=0
+def setup():
+    size(600,600)
+def draw():
+    background(255)
+    global y
+    for x in range(0,600,50):
+        rect(y,x,40,40)
+    y=y+1
