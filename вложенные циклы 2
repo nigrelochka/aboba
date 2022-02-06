@@ -1,0 +1,25 @@
+white=255
+black=0
+clr = 1
+x=0
+y=0
+def setup():
+    size(600,600)
+def draw():       
+    global black,white,x,clr
+    for f in range(0,600,50):
+        clr=-clr
+        for g in range(0,600,50):
+            if clr==1:
+                fill(white)
+            else:
+                fill(black) 
+            clr=-clr
+            if clr==-1:
+                fill(black)
+            else:
+                fill(white)           
+            rect(g,f,50,50)
+            
+    
+  
