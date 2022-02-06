@@ -1,0 +1,14 @@
+x = 2
+z=2
+def setup():
+  size(800, 800)
+def draw():
+    frameRate(60)
+    translate(400,400)
+    global x,y,z
+    for y in range(0,300,50):
+        for y in range(0,300,50):
+            rotate(z)
+            ellipse(x, y, 25,50)
+            ellipse(x, y, 50,25)
+        z=z+1
