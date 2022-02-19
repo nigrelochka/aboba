@@ -1,0 +1,31 @@
+j=[u"хлеб",u"молоко",u"сыр",u"колбаса",u"сметана",u"укроп"]
+i=0
+z=300
+h=205
+def setup():
+    size(600,600)
+def draw():
+    global x,z,h
+    i=0
+    if h>450:
+        h=h-50
+    if h<200:
+        h=h+50    
+    background(255)
+    global j,i
+    fill(254,255,21)
+    rectMode(CENTER)
+    rect(z,h,100,40)
+    fill(0)
+    textSize(20)
+    
+    textAlign(CENTER,CENTER)
+    for g in range(200,450,50):
+        i=i+1
+        text(j[i],300,g)   
+def keyPressed():
+    global z,h
+    if key == 'w' or key == 'W' or key == u'ц' or key == u'Ц':
+        h=h+50        
+    if key == 'S' or key == 's' or key == u'Ы' or key == u'ы':
+        h=h-50            
