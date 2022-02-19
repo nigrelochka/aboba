@@ -1,0 +1,20 @@
+j=[101,236,240,0,255,21,58]
+j1=[216,240,56,0,21,237,255]
+j2=[121,56,56,0,216,255,21]
+i=0
+z=300
+h=205
+def setup():
+    size(600,600)
+def draw():
+    global x,z,h,i
+    i=0
+    textAlign(CENTER,CENTER)
+    for g in range(50,600,80):
+        rectMode(CENTER)
+        fill(j[i],j1[i],j2[i])              
+        rect(g,300,50,50)
+        i=i+1           
+        
+  
+        
