@@ -1,0 +1,16 @@
+gog=[]
+kok=[5,15,45]
+def setup():
+    size (600,600)
+def draw():
+    global y
+    background(250)
+    for x in gog:
+        fill(random(255),random(255),random(255))
+        ellipse(x,x,40,40)
+def mouseClicked():
+    gog.append(mouseX)
+if mouseButton==RIGHT:
+    keyPressed():
+    if len (gog)>0:
+        del gog[len(gog)-1]
