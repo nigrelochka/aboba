@@ -1,0 +1,22 @@
+bykvi=[]
+miPishem=u"o"
+def setup():
+    size(600,600)
+def draw():
+    global miPishem,bykvi
+    background(255)
+    textSize(50)
+    text(miPishem,200,300)
+    for letter in bykvi:
+        fill(0)
+        text(letter, 300,50)
+        translate(0,40)
+def keyPressed():
+    global miPishem, bykvi
+    if key!=CODED and key!=ENTER and key!=BACKSPACE:
+        miPishem=key
+    elif key==ENTER:
+        bykvi.append(miPishem)   
+    elif key==BACKSPACE:
+        if len(bykvi)>0:
+            del bykvi[len(bykvi)-1]    
