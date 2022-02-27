@@ -1,0 +1,41 @@
+bykvi=[u"убраться",u"сделать домашку", u"поужинать"]
+
+miPishem=""
+def setup():
+    size(600,600)
+def draw():
+    i=0
+    global miPishem,bykvi
+    background(255)
+    textSize(30)
+    # if key==CODED and key!=BACKSPACE:
+    text(miPishem,200,300)
+    for letter in bykvi:
+        fill(0)
+        text(letter, 300,50)
+        translate(0,40)
+def keyPressed():
+    global miPishem, bykvi
+    if key!=CODED and key!=ENTER and key!=BACKSPACE:
+        miPishem=miPishem+key
+    elif key==ENTER:
+        bykvi.append(miPishem) 
+        miPishem=key  
+    elif key==BACKSPACE:
+        if len(bykvi)>0:
+            del bykvi[len(bykvi)-1]        
+    if key=="1" and len(bykvi)>0:
+        del bykvi[0] 
+        miPishem = ''
+    if key=="2" and len(bykvi)>1:
+        del bykvi[1] 
+        miPishem = ''
+    if key=="3" and len(bykvi)>2:
+        del bykvi[2] 
+        miPishem = ''
+    if key=="4" and len(bykvi)>3:
+        del bykvi[3] 
+        miPishem = ''
+    if key=="5" and len(bykvi)>4:
+        del bykvi[4] 
+        miPishem = ''                             
