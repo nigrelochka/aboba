@@ -1,0 +1,31 @@
+pole = [['white','white','white','white','white','white','white','white','white','white','white','white','white','white'],
+        ['white','white','white','white','white','white','white','white','white','white','white','white','white','white'],
+        ['white','white','white','white','white','white','white','white','white','white','white','white','white','white'],
+        ['blue','blue','blue','blue','blue','blue','blue','blue','blue','blue','blue','blue','blue','blue'],
+        ['blue','blue','blue','blue','blue','blue','blue','blue','blue','blue','blue','blue','blue','blue'],
+        ['blue','blue','blue','blue','blue','blue','blue','blue','blue','blue','blue','blue','blue','blue'],
+        ['red','red','red','red','red','red','red','red','red','red','red','red','red','red'],
+        ['red','red','red','red','red','red','red','red','red','red','red','red','red','red'],
+        ['red','red','red','red','red','red','red','red','red','red','red','red','red','red']]
+
+
+#Посчитаем и запомним, сколько рядов и столбцов
+numRyad = len(pole) # длина списка списков,
+numStolbets = len(pole[0]) # длина первого списка в списке
+def setup():
+    size(700,450)
+    
+def draw():
+    
+    global finRyad, finStolbets
+    for nRyada in range(numRyad): 
+        for nStolbtsa in range(numStolbets):
+            # если 1 красим в чёрный иначе в белый
+            if pole[nRyada][nStolbtsa] == 'red':
+                fill(255, 0, 0)
+            if pole[nRyada][nStolbtsa] == 'blue':
+                fill(44, 89,245)
+            if pole[nRyada][nStolbtsa] == 'white':
+                fill(255)    
+            rect(nStolbtsa*50,nRyada*50,50,50)
+            
