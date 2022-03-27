@@ -1,5 +1,5 @@
 pole = [['white','white','white','white','fake','white','white'],
-        ['white','white','fake','white','white','white','white'],
+        ['white','white','fake','white','white','whit','white'],
         ['white','fake','white','white','white','fake','white'],
         ['white','white','white','fake','white','white','white'],
         ['white','white','fake1','white','white','white','fake1'],
@@ -24,20 +24,17 @@ def setup():
     size(700,700)
 def draw():
     global pole, finRyad, finStolbets,g,k,z,d,h,l,m
-    
     for nRyada in range(numRyad): 
         for nStolbtsa in range(numStolbets):
             if pole[nRyada][nStolbtsa] == 'white':
-                fill(255)  
-            if pole[nStolbtsa][nRyada] == 'fake':
-                image(m,nRyada*100,nStolbtsa*100,100,100)
-                fill(255,0,0)
-            if pole[nStolbtsa][nRyada] == 'fake1':
-                image(l,nRyada*100,nStolbtsa*100,100,100)  
-                fill(0,255,0)  
+                fill(255)    
+            if pole[nRyada][nStolbtsa] == 'fake':
+                image(m,nStolbtsa*100,nRyada*100,100,100)
+            if pole[nRyada][nStolbtsa]== 'fake1':
+                image(l,nStolbtsa*100,nRyada*100,100,100)  
             if pole[nRyada][nStolbtsa] == 'win':
                 fill(255,250,90)    
-            rect(nRyada*100,nStolbtsa*100,100,100)   
+            rect(nStolbtsa*100,nRyada*100,100,100)       
     image(h,600,600,100,100)   
     image(z,g,k,100,100)  
     if g>=600 and g<700  and k>=600 and k<700:
@@ -81,5 +78,4 @@ def keyPressed():
         textSize(25)
         fill(0)
         text(u"Увы, вы не смогли помочь черепашке",350,350)
-        text(u"теперь её ничего не ждёт(",350,380)         
-                      
+        text(u"теперь её ничего не ждёт(",350,380)   
