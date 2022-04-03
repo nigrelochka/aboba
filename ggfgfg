@@ -1,0 +1,123 @@
+import time
+pole = [['white','white','white','white','white','white','white'],
+        ['white','white','white','white','white','white','white'],
+        ['white','white','white','white','white','white','white'],
+        ['white','white','white','white','white','white','white'],
+        ['white','white','white','white','white','white','white'],
+        ['white','white','white','white','white','white','white'],
+        ['white','white','white','white','white','white','white']]
+x=0
+y=40
+g=0
+k=0
+z=0
+h=0
+l=0
+m=0
+a=0
+c=0
+p=0
+n=2000
+jh=255
+hh=255
+hj=255
+numRyad = len(pole) 
+numStolbets = len(pole[0])
+def setup():   
+    global z,h,l,m,a
+    z=loadImage("cherepashka.png")
+    h=loadImage("okean.png")
+    l=loadImage("krab.png")
+    m=loadImage("chaika.png")
+    a=loadImage("pesokk.png")
+    size(700,700)
+def draw():
+    background(255)
+    global pole, finRyad, finStolbets,g,k,z,d,h,l,m,a,n,c,p,jh
+    for nRyada in range(numRyad): 
+        for nStolbtsa in range(numStolbets):
+            fill(255)
+            if pole[nRyada][nStolbtsa] == 'fake':
+                image(m,nStolbtsa*100,nRyada*100,100,100)
+            if pole[nRyada][nStolbtsa]== 'fake1':
+                image(l,nStolbtsa*100,nRyada*100,100,100) 
+            if pole[nRyada][nStolbtsa]== 'black':    
+                fill(jh,hh,hj) 
+            rect(nRyada*100,nStolbtsa*100,100,100)
+            #if pole[nRyada][nStolbtsa] == 'win':
+                #fill(255,250,90)                     
+    image(h,600,600,100,100)   
+    image(z,g,k,100,100)  
+    #if g>=600 and g<700  and k>=600 and k<700 and n>0:
+        #rectMode(CENTER)
+        #fill(255)
+        #rect(350,350,600,200)
+        #textAlign(CENTER,CENTER)
+        #textSize(25)
+        #fill(0)
+        #text(u"Поздравляю! Вы смогли помочь черепашке",350,350)
+        #text(u"теперь её ждёт хорошая черепашья жизнь",350,380)
+        #n=n-100
+    if pole[k / 100][g/100] == 'fake' and n>0:
+            rectMode(CENTER)
+            fill(255)
+            rect(350,350,600,200)
+            textAlign(CENTER,CENTER)
+            textSize(25)
+            fill(0)
+            text(u"Увы, вы не смогли помочь черепашке",350,350)
+            text(u"теперь её ничего не ждёт!!(",350,380) 
+            n=n-100      
+    if pole[k / 100][g/100] == 'fake1' and n>0:
+            rectMode(CENTER)
+            fill(255)
+            rect(350,350,600,200)
+            textAlign(CENTER,CENTER)
+            textSize(25)
+            fill(0)
+            text(u"Увы, вы не смогли помочь черепашке",350,350)
+            text(u"теперь её ничего не ждёт(",350,380) 
+            n=n-100              
+    if n<1:        
+            g=0
+            k=0
+            n=n+2000
+    if n>2000:
+        n=n+0       
+def keyPressed():
+    global g,k,c,p,pole,jh,hh,hj
+    if key == 'w' or key == 'W' or key == u'ц' or key == u'Ц':
+              k=k-100
+              c=g
+              p=k+100
+              pole[c/100][p/100]='black'
+    if key =='s' or key == 'S' or key ==u'ы' or key ==u'Ы':
+              k=k+100
+              c=g
+              p=k-100
+              pole[c/100][p/100]='black'
+    if key =='a' or key == 'A' or key ==u'ф' or key ==u'Ф':
+              g=g-100
+              p=k
+              c=g+100
+              pole[c/100][p/100]='black'
+    if key =='d' or key == 'D' or key ==u'в' or key ==u'В':
+              g=g+100
+              p=k   
+              c=g-100 
+              pole[c/100][p/100]='black'
+    if g<0:
+        g=g+100
+    if g>600:
+        g=g-100
+    if k<0:
+        k=k+100
+    if k>600:
+        k=k-100   
+    if key == ' ' or key == ' ' or key == u' ' or key == u' ': 
+        jh=97
+        hh=252
+        hj=124
+
+      
+   
