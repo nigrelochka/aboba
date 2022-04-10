@@ -1,0 +1,64 @@
+x = 45+400
+y = 0+400
+x1 = -20+400
+x2 = 20+400
+x3 = 48+400
+u = 320
+u1 = 380
+u2 = 350
+r = 343
+s = 358
+j=30
+k=40
+l=80
+def setup():
+    size(600,600)
+    
+    
+def cherepashka():
+    global x,y, x1, x2,x3,u,u1,u2,r,s,j,k,l
+    fill(47,211,133)
+    strokeWeight(3)
+    ellipse(x1,u,j,j)
+    ellipse(x1,u1,j,j)
+    ellipse(x2,u1,j,j)
+    ellipse(x2,u,j,j)
+    ellipse(x,u2,k,k)
+    ellipse(y,u2,l,l)
+    strokeWeight(5)
+    point(x3,r)
+    point(x3,s)    
+    
+    
+def draw():
+    background(255)
+    global x,y, x1, x2,x3,u,u1,u2,r,s,j,k,l
+    cherepashka()
+    
+    
+def keyPressed():
+    global x,y, x1, x2,x3,u,u1,u2,r,s,j,k,l
+    if key == 'w' or key == 'W' or key == u'ц' or key == u'Ц':
+        u=u+3
+        u1=u1+3
+        u2=u2+3
+        r=r+3
+        s=s+3
+    if key == 'A' or key == 'a' or key == u'ф' or key == u'Ф':
+        x=x-3
+        x2=x2-3
+        x1=x1-3
+        y=y-3
+        x3=x3-3
+    if key == 'S' or key == 's' or key == u'ы' or key == u'Ы':
+        u=u-3
+        u1=u1-3
+        u2=u2-3
+        r=r-3
+        s=s-3
+    if key == 'd' or key == 'D' or key == u'В' or key == u'В':    
+        x=x+3
+        x1=x1+3
+        x2=x2+3
+        x3=x3+3
+        y=y+3            
