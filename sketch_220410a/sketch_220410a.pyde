@@ -1,7 +1,19 @@
-from sneg import snegovik
+from snezinka import snez
+l=1
+h=1
 def setup():
-    size(600,600)
+    size(700,700)
 def draw():
-    snegovik(300,-500,2)
-    snegovik(500,0,1)
-    snegovik(100,-400,1.5)
+    line(315,350,385,350)
+    line(350,315,350,385)
+    line(325,325,375,375)
+    line(325,350,375,350)
+    # global l,j,h
+    # rotate(h)
+    # translate(l,l)
+    # snez()
+    # l=l+1
+    # h=h+1
+
+    
+    
