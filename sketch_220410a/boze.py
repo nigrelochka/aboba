@@ -1,0 +1,13 @@
+def snez1(l,h):
+    push()
+    translate(l,h)
+    ellipse(325,375,50,50)
+    ellipse(375,375,50,50)
+    ellipse(350,385,50,50)
+    ellipse(315,350,50,50)
+    ellipse(385,350,50,50)
+    ellipse(325,315,50,50)
+    ellipse(375,315,50,50)
+    ellipse(350,315,50,50)
+    ellipse(350,350,80,82)
+    pop()
