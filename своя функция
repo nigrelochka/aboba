@@ -1,0 +1,20 @@
+x=100
+y=100
+f=227
+g=153
+def setup():
+    size(600,600)
+def draw():
+    global x,y,g,f
+    rectMode(CENTER) 
+    fill(255)    
+    rect(460,400,f,g)
+    rect(200,300,y,x)
+    fill(0)
+    textAlign(CENTER,CENTER)
+    textSize(15)
+    text(ploshad(x,y),200,300)
+    text(ploshad(f,g),460,400)
+def ploshad(x,y):
+    s=x*y
+    return s    
