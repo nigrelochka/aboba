@@ -2,10 +2,13 @@ x=0
 s=u"право"
 z=u"лево"
 def setup():
+    global x
     size(600,600)
     strokeWeight(10)
-    point(x+random(100,600),random(100,500))
+    x=x+random(100,600)
+    point(x,random(100,500))
 def draw():  
+    global x
     textAlign(CENTER,CENTER)
     textSize(40)
     fill(0)  
@@ -15,4 +18,3 @@ def koordinati(x):
         return s  
     else:
         return z   
-   
