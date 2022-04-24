@@ -1,0 +1,24 @@
+x=0
+y=0
+s="True"
+z="False"
+def setup():
+    global x,y
+    size(600,600)
+    x=x+random(100,600)
+    y=y+random(100,600)
+    rectMode(CENTER)
+    rect(300,300,200,200)
+    strokeWeight(10)
+    point(x,y)
+def draw():  
+    global x,y
+    textAlign(CENTER,CENTER)
+    textSize(40)
+    fill(0)  
+    text(koordinati(x),500,500)
+def koordinati(x):
+    if x > 200 and x < 400 and y > 200 and y < 400:
+        return s  
+    else:
+        return z   
