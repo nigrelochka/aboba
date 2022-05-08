@@ -1,16 +1,26 @@
-from lvl_1 import lvlOne
-ch=0
-ch2=0
-ch3=0
-f0n2=0
+from lvl_1 import *
+from lvl import start
+y=500
+Lvl=0
 def setup():
     size(900,700)
-    global ch,ch2,ch3,fon2
-    ch=loadImage("sk1.png")
-    ch2=loadImage("sk2.png")
-    ch3=loadImage("sk3.png")
-    fon2=loadImage("fon2.jpg")
+    frameRate(60)
 def draw():
-    global ch,ch2,ch3,fon2,fon1
-    lvlOne()
-    image(ch,100,400,170,100)    
+    global Lvl,y
+    if Lvl==0:
+        start()
+    if Lvl==1:
+        lvlOne(y)
+        if keyPressed == True:
+            if keyCode == SHIFT:
+                if y>200:
+                    y=y-15
+        if keyPressed == False:
+            if y<450:
+                y=y+10            
+      
+def mouseClicked():    
+    global Lvl
+    if mouseX > 320 and mouseX < 570 and mouseY > 300 and mouseY < 450:
+        Lvl=Lvl+1
+        
