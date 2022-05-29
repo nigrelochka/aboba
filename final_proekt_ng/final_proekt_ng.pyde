@@ -13,11 +13,11 @@ def draw():
         lvlOne(y)
         if keyPressed == True:
             if keyCode == SHIFT:
-                if y>200:
-                    y=y-15
+                if y>250:
+                    y=y-20
         if keyPressed == False:
-            if y<450:
-                y=y+10            
+            if y<500:
+                y=y+10           
       
 def mouseClicked():    
     global Lvl
